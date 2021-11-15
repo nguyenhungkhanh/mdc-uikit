@@ -7,6 +7,12 @@ import { ButtonProps } from "../../components/Button";
 import { connectorLocalStorageKey, walletLocalStorageKey } from "./config";
 import { Login, Config, ConnectorNames } from "./types";
 
+declare global {
+  interface Window {
+    MSStream: any;
+  }
+}
+
 interface Props {
   walletConfig: Config;
   login: Login;
